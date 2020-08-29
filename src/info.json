@@ -1,0 +1,13 @@
+{
+  "name": "Kux-SpeedyBotStart",
+  "version": "1.0.0",
+  "factorio_version": "1.0",
+  "title": "Speedy Bot Start",
+  "author": "Kuxynator",
+  "homepage": "",
+  "dependencies": [
+    "base >= 1.0.0",
+    "! how-it-should-have-started"
+  ],
+  "description": "Jump straight to building your base with speedy construction bots! Super handy for those times when you have all the initial stuff planned out and don't want to spend time chopping down trees. Adds custom construction bots, roboport and exoskeletons to the player when they join the game. These are equivalent to top tier equipment but cannot be built and will disappear when you research the upper tiers of these technologies. Grants construction research by default to allow ghosts from the start. Based on how-it-should-have-started by Pawz"
+}

@@ -1,0 +1,3 @@
+v1.0.0
+ - Created for Factorio 1.0
+ - completely based on https://mods.factorio.com/mod/how-it-should-have-started
