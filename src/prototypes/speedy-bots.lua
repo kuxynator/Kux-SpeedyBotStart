@@ -13,8 +13,11 @@ speedybot.energy_per_tick = "0kJ"
 speedybot.speed_multiplier_when_out_of_energy = 1
 speedybot.energy_per_move = "0kJ"
 speedybot.max_payload_size = 5
-speedybot.speed = 0.4
+speedybot.speed = 0.45
 speedybot.max_health = 1000
+
+local botscale = 0.5
+
 speedybot.minable = {
     mining_time = 0.1,
     result = "speedy-bot"
@@ -29,6 +32,7 @@ speedybot.idle = {
     frame_count = 1,
     shift = util.by_pixel(0,-4.5),
     direction_count = 16,
+    scale = botscale,
     hr_version =
     {
       filename = "__Kux-SpeedyBotStart__/graphics/entity/robots/hr-construction-robot-speedy.png",
@@ -39,7 +43,7 @@ speedybot.idle = {
       frame_count = 1,
       shift = util.by_pixel(0,-4.5),
       direction_count = 16,
-      scale = 0.5
+      scale = botscale/2
     }
 }
 
@@ -55,6 +59,7 @@ speedybot.in_motion = {
     shift = util.by_pixel(0, -4.5),
     direction_count = 16,
     y = 36,
+    scale = botscale,
     hr_version =
     {
         filename = "__Kux-SpeedyBotStart__/graphics/entity/robots/hr-construction-robot-speedy.png",
@@ -66,7 +71,7 @@ speedybot.in_motion = {
         shift = util.by_pixel(0, -4.5),
         direction_count = 16,
         y = 76,
-        scale = 0.5
+        scale = botscale/2
     }
 }
 
@@ -82,6 +87,7 @@ speedybot.working = {
     shift = util.by_pixel(-0.25, -5),
     direction_count = 16,
     animation_speed = 0.3,
+    scale = botscale,
     hr_version =
     {
         filename = "__Kux-SpeedyBotStart__/graphics/entity/robots/hr-construction-robot-working-speedy.png",
@@ -93,7 +99,7 @@ speedybot.working = {
         shift = util.by_pixel(-0.25, -5),
         direction_count = 16,
         animation_speed = 0.3,
-        scale = 0.5
+        scale = botscale/2
     }
 }
 

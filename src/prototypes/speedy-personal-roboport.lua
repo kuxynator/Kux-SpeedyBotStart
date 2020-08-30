@@ -18,7 +18,7 @@ speedyRobo.energy_source = {
 }
 speedyRobo.robot_limit = 100
 speedyRobo.take_result = "speedy-robo"
-speedyRobo.construction_radius = 100
+speedyRobo.construction_radius = 40
 
 speedyRoboRecipe.name = "speedy-robo"
 speedyRoboRecipe.result = "speedy-robo"
