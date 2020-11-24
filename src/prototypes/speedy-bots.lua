@@ -1,9 +1,11 @@
+require("kux-lib")
+
 local speedybotitem = table.deepcopy(data.raw.item["construction-robot"])
 
 speedybotitem.name = "speedy-bot"
 speedybotitem.tint = {r = 1, g = 0, b = 0, a = 0.3}
 speedybotitem.place_result = "speedy-bot"
-speedybotitem.stack_size = 100
+speedybotitem.stack_size = iif(isCheaty, 200, 100)
 speedybotitem.icon = "__Kux-SpeedyBotStart__/graphics/icons/robots/construction-robot-speedy.png"
 
 local speedybot = table.deepcopy(data.raw["construction-robot"]["construction-robot"])
@@ -13,7 +15,7 @@ speedybot.energy_per_tick = "0kJ"
 speedybot.speed_multiplier_when_out_of_energy = 1
 speedybot.energy_per_move = "0kJ"
 speedybot.max_payload_size = 5
-speedybot.speed = 0.45
+speedybot.speed = iif(isCheaty, 5, 0.45)
 speedybot.max_health = 1000
 
 local botscale = 0.5

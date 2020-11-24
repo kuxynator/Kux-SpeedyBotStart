@@ -1,3 +1,5 @@
+require("kux-lib")
+
 local speedyRobo = table.deepcopy(data.raw["roboport-equipment"]["personal-roboport-equipment"])
 
 local speedyRoboItem = table.deepcopy(data.raw.item["personal-roboport-equipment"])
@@ -16,7 +18,7 @@ speedyRobo.energy_source = {
     type = "electric",
     usage_priority = "secondary-input"
 }
-speedyRobo.robot_limit = 100
+speedyRobo.robot_limit = iif(isCheaty, 200, 100)
 speedyRobo.take_result = "speedy-robo"
 speedyRobo.construction_radius = 40
 

@@ -1,6 +1,19 @@
+require("kux-lib")
+
+local inventories = {
+    defines.inventory.player_armor,
+    defines.inventory.player_main,
+    defines.inventory.player_quickbar,
+    defines.inventory.player_guns,
+    defines.inventory.player_ammo,
+    defines.inventory.player_tools,
+    defines.inventory.player_vehicle,
+    defines.inventory.player_player_trash
+}
+
 local items = {
-	-- ["light-armor"] = 1, --NOTE disable this if the gamer should work a little bit ;-) 
-	["speedy-bot"] = 100,
+	["light-armor"] = iif(isCheaty, 1, 0),
+	["speedy-bot"] = iif(isCheaty, 200, 100),
 	["speedy-exo"] = 1,
 	["speedy-robo"] = 1,
 	["solar-panel-equipment"] = 1
@@ -8,8 +21,9 @@ local items = {
 
 script.on_init(
     function()	
-	
 		if not remote.interfaces["freeplay"] then return end
+
+        isCheaty = settings.global["EnableCheatMode"].value;
 
 		-- Add items
 		local created_items = remote.call("freeplay", "get_created_items")
@@ -73,3 +87,4 @@ script.on_event(
         end
     end
 )
+

@@ -1,3 +1,5 @@
+require("kux-lib")
+
 --[[
   data:extend(
   {
@@ -9,3 +11,12 @@
     }
   }
 )]]
+
+data:extend({
+  {
+      type = "bool-setting",
+      name = "EnableCheatMode",
+      setting_type = "runtime-global",
+      default_value = false
+  }
+})

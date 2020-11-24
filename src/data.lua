@@ -1,6 +1,7 @@
 require("prototypes.speedy-bots")
 require("prototypes.speedy-legs")
 require("prototypes.speedy-personal-roboport")
+require("kux-lib")
 
 local tinygrid = table.deepcopy(data.raw["equipment-grid"]["small-equipment-grid"])
 
