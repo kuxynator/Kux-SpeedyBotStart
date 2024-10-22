@@ -31,11 +31,20 @@ script.on_init(
 			created_items[k] = (created_items[k] or 0) + v
 		end	
 		remote.call("freeplay", "set_created_items", created_items)
+
+		game.forces["player"].technologies["construction-robotics"].researched = true
 	end
 )
+--[[
+script.on_event(defines.events.on_player_created,
+	function(event)
+		local player = game.get_player(event.player_index)
+		game.forces["player"].technologies["construction-robotics"].researched = true
+	end
+)
+]]
 
-script.on_event(
-    defines.events.on_research_finished,
+script.on_event(defines.events.on_research_finished,
     function(event)
         if (game.technology_prototypes["bob-robots-4"]) then -- Bob's
             if (event.research and event.research.name == "bob-robots-4") then
